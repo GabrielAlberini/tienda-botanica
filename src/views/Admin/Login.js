@@ -1,5 +1,6 @@
 import { Container, Form, Button } from "react-bootstrap";
-import { loginEmailPassword } from "../functions/loginEmailPassword";
+import { loginEmailPassword } from "../../functions/loginEmailPassword";
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   async function submitHandle(e) {
@@ -20,13 +21,16 @@ const Login = () => {
             placeholder="Ingrese su correo electronico"
           />
         </Form.Group>
-        <Form.Group className="mb-4" controlId="formContraseña">
+        <Form.Group className="mb-2" controlId="formContraseña">
           <Form.Label>Contraseña</Form.Label>
           <Form.Control type="password" placeholder="Ingrese su contraseña" />
         </Form.Group>
         <Button variant="primary" type="submit">
           Iniciar sesión
         </Button>
+        <Link to={'/'}>
+          <Button className="m-3" variant='light'>Ir al Inicio</Button>
+        </Link>
       </Form>
     </Container>
   );
