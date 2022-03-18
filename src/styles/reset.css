@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Old Standard TT', serif;
 }
 
 html,
@@ -93,6 +92,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: "Old Standard TT", serif;
 }
 article,
 aside,
