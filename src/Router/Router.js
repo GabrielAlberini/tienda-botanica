@@ -7,6 +7,7 @@ import { NotFound } from '../views/NotFound'
 
 const Router = () => {
   return (
+    <>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Inicio />} />
@@ -16,6 +17,7 @@ const Router = () => {
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
+    </>
   );
 };
 
