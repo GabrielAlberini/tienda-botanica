@@ -5,5 +5,23 @@
 
 * {
     background-color: #f1f1f1;
-    
 }
+
+/*Boton general*/
+
+.btn-general {
+    padding: 1rem;
+    border: 1px solid #DA9795;
+    color: black;
+    text-decoration: none;
+    transition: .4s ease;
+}
+
+.btn-general:hover {
+    color: black;
+    background-color: #DA9795;
+}
+
+.btn-general:hover:visited {
+    color: black;
+  }
