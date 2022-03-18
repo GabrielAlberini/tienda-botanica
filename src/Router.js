@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { MenuLogin } from "../views/Admin/MenuLogin";
-import { Inicio } from '../views/Inicio'
-import { TiendaBotanica } from '../views/TiendaBotanica'
-import { Contacto } from '../views/Contacto'
-import { NotFound } from '../views/NotFound'
+import { MenuLogin } from "./views/Admin/MenuLogin";
+import { Inicio } from './views/Inicio'
+import { TiendaBotanica } from './views/TiendaBotanica'
+import { Contacto } from './views/Contacto'
+import { NotFound } from './views/NotFound'
 
 const Router = () => {
   return (
