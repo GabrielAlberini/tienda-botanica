@@ -2,7 +2,7 @@ import "./SideBarInicio.css";
 
 const SideBarInicio = () => {
   return (
-    <section>
+    <section className="section-sidebar">
       <div className="container-img">
         <img src="https://i.ibb.co/z5rkrkj/IMG-4652.jpg" alt="foto de inicio" />
       </div>
