@@ -1,0 +1,74 @@
+.main-tienda-botanica {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container-bio {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.container-imagenes-tienda {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.container-img-tienda {
+  width: 350px;
+}
+
+.img-tienda {
+  width: 100%;
+  filter: grayscale(1);
+  border-radius: 5px;
+}
+
+.container-txt-lema {
+  margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+  padding: 4rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  background-color: #FEF2EE;
+}
+
+.container-txt-lema > p {
+  background-color: #FEF2EE;
+}
+
+.container-contacto-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .main-tienda-botanica {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .container-txt-lema {
+    margin-top: 4rem;
+    width: 100%;
+    text-align: center;
+    padding: 4rem;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #FEF2EE;
+  }
+  
+  .container-txt-lema > p {
+    background-color: #FEF2EE;
+  }
+}
