@@ -1,4 +1,4 @@
-import firebaseApp from "../firebase/credenciales";
+import firebaseApp from "../../firebase/credenciales";
 import { getFirestore, deleteDoc, doc, collection } from "firebase/firestore";
 
 const db = getFirestore(firebaseApp);

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Modal, Stack, Form, Button } from "react-bootstrap";
-import { addProduct } from "../../functions/addNewProduct";
+import { addProduct } from "../../../../../../functions/recomendaciones/addNewProduct";
 
 const EditarModal = ({
   isModalEditar,
@@ -12,12 +12,12 @@ const EditarModal = ({
   const [productoEstado, setProductoEstado] = useState({});
 
   function editarProductoModal() {
+    const urlImagen = document.getElementById("urlImagen").value;
+    const categoria = document.getElementById("categoria").value;
     const titulo = document.getElementById("titulo").value;
-    const precio = document.getElementById("precio").value;
-    const cantidad = document.getElementById("cantidad").value;
+    const contenido = document.getElementById("contenido").value;
     const sku = document.getElementById("sku").value;
-    const infoProducto = { titulo, precio, cantidad, sku };
-    console.log(titulo);
+    const infoProducto = { urlImagen, categoria, titulo, contenido, sku };
     addProduct(infoProducto);
     setProductoEditar(null);
     actualizarEstadoProductos();
@@ -37,7 +37,7 @@ const EditarModal = ({
       }}
     >
       <Modal.Header>
-        <Modal.Title>Editar producto</Modal.Title>
+        <Modal.Title>Editar recomendación</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
@@ -56,35 +56,50 @@ const EditarModal = ({
                 });
               }}
             />
-            <Form.Label>Precio</Form.Label>
+            <Form.Label>URL imagen</Form.Label>
             <Form.Control
-              id="precio"
-              placeholder="precio"
-              type="number"
+              id="urlImagen"
+              placeholder="URL Imagen"
+              type="text"
               className="mb-2"
-              value={productoEstado?.precio}
+              value={productoEstado?.urlImagen}
               onChange={(e) => {
                 setProductoEstado({
                   ...productoEstado,
-                  precio: e.target.value,
+                  urlImagen: e.target.value,
                 });
               }}
             />
-            <Form.Label>Cantidad</Form.Label>
+            <Form.Label>Categoria</Form.Label>
             <Form.Control
-              id="cantidad"
-              placeholder="cantidad"
-              type="number"
+              id="categoria"
+              placeholder="Categoria"
+              type="text"
               className="mb-2"
-              value={productoEstado?.cantidad}
+              value={productoEstado?.categoria}
               onChange={(e) => {
                 setProductoEstado({
                   ...productoEstado,
-                  cantidad: e.target.value,
+                  categoria: e.target.value,
                 });
               }}
             />
-            <Form.Label>SKU - Solo lectura</Form.Label>
+            <Form.Label>Contenido</Form.Label>
+            <Form.Control
+              as="textarea"
+              id="contenido"
+              placeholder="Contenido"
+              type="text"
+              className="mb-2"
+              value={productoEstado?.contenido}
+              onChange={(e) => {
+                setProductoEstado({
+                  ...productoEstado,
+                  contenido: e.target.value,
+                });
+              }}
+            />
+            <Form.Label>ID - Solo lectura</Form.Label>
             <Form.Control
               disabled
               id="sku"

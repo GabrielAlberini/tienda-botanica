@@ -1,5 +1,5 @@
 import { Container, Form, Button } from "react-bootstrap";
-import { loginEmailPassword } from "../../functions/loginEmailPassword";
+import { loginEmailPassword } from "../../functions/login/loginEmailPassword";
 import { Link } from 'react-router-dom'
 
 const Login = () => {

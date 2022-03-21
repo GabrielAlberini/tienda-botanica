@@ -1,63 +1,51 @@
+import { useState, useEffect } from "react";
 import "./RecomendacionesInicio.css";
+import { getAllProducts } from "../../functions/recomendaciones/getAllProducts";
+import { Stack, Spinner, Container } from "react-bootstrap";
 
 const RecomendacionesInicio = () => {
+  const [recomendaciones, setRecomendaciones] = useState([]);
+
+  function actualizarEstadoProductos() {
+    getAllProducts().then((listadoDeRecomendaciones) => {
+      setRecomendaciones(listadoDeRecomendaciones);
+    });
+  }
+
+  useEffect(() => {
+    actualizarEstadoProductos();
+  }, []);
+
   return (
-    <section>
+    <section className="main-recomendaciones">
       <h3 className="title-recomedaciones">Nuestras recomendaciones</h3>
+      {!recomendaciones.length && (
+        <Container direction="horizontal" className="justify-content-between">
+          <Stack>
+            <Spinner className="mx-auto" animation="border" role="status" />
+          </Stack>
+        </Container>
+      )}
       <section className="section-recomendaciones">
+        {recomendaciones.map((reco) => (
           <article>
-              <a className="link-recomendacion" href="">
+            <a className="link-recomendacion" href="">
               <div className="container-img-recomendaciones">
-                  <img className="container-img-recomendaciones" src="https://i.ibb.co/52LmZHw/DSC-17131-1.jpg" alt="lalala" />
+                <img
+                  className="container-img-recomendaciones"
+                  src={reco.urlImagen}
+                  alt={reco.titulo}
+                />
               </div>
-              </a>
-              <p className="categoria-recomendaciones">Lorem ipsum dolor sit.</p>
-              <h4 className="title-item-recomendaciones">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, harum.</h4>
-              <p className="descripcion-recomendaciones">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat vitae praesentium quos nemo similique, tempore ab possimus obcaecati quidem quibusdam rerum optio sequi voluptas voluptate tenetur velit ratione. Corrupti.</p>
+            </a>
+            <p className="categoria-recomendaciones">{reco.categoria}</p>
+            <h4 className="title-item-recomendaciones">{reco.titulo}</h4>
+            <p className="descripcion-recomendaciones">{reco.contenido}</p>
           </article>
-          <article>
-              <div className="container-img-recomendaciones">
-                  <img className="container-img-recomendaciones" src="https://i.ibb.co/52LmZHw/DSC-17131-1.jpg" alt="lalala" />
-              </div>
-              <p className="categoria-recomendaciones">Lorem ipsum dolor sit.</p>
-              <h4 className="title-item-recomendaciones">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, harum.</h4>
-              <p className="descripcion-recomendaciones">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat vitae praesentium quos nemo similique, tempore ab possimus obcaecati quidem quibusdam rerum optio sequi voluptas voluptate tenetur velit ratione. Corrupti.</p>
-          </article>
-          <article>
-              <div className="container-img-recomendaciones">
-                  <img className="container-img-recomendaciones" src="https://i.ibb.co/52LmZHw/DSC-17131-1.jpg" alt="lalala" />
-              </div>
-              <p className="categoria-recomendaciones">Lorem ipsum dolor sit.</p>
-              <h4 className="title-item-recomendaciones">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, harum.</h4>
-              <p className="descripcion-recomendaciones">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat vitae praesentium quos nemo similique, tempore ab possimus obcaecati quidem quibusdam rerum optio sequi voluptas voluptate tenetur velit ratione. Corrupti.</p>
-          </article>
-          <article>
-              <div className="container-img-recomendaciones">
-                  <img className="container-img-recomendaciones" src="https://i.ibb.co/52LmZHw/DSC-17131-1.jpg" alt="lalala" />
-              </div>
-              <p className="categoria-recomendaciones">Lorem ipsum dolor sit.</p>
-              <h4 className="title-item-recomendaciones">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, harum.</h4>
-              <p className="descripcion-recomendaciones">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat vitae praesentium quos nemo similique, tempore ab possimus obcaecati quidem quibusdam rerum optio sequi voluptas voluptate tenetur velit ratione. Corrupti.</p>
-          </article>
-          <article>
-              <div className="container-img-recomendaciones">
-                  <img className="container-img-recomendaciones" src="https://i.ibb.co/52LmZHw/DSC-17131-1.jpg" alt="lalala" />
-              </div>
-              <p className="categoria-recomendaciones">Lorem ipsum dolor sit.</p>
-              <h4 className="title-item-recomendaciones">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, harum.</h4>
-              <p className="descripcion-recomendaciones">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat vitae praesentium quos nemo similique, tempore ab possimus obcaecati quidem quibusdam rerum optio sequi voluptas voluptate tenetur velit ratione. Corrupti.</p>
-          </article>
-          <article>
-              <div className="container-img-recomendaciones">
-                  <img className="container-img-recomendaciones" src="https://i.ibb.co/52LmZHw/DSC-17131-1.jpg" alt="lalala" />
-              </div>
-              <p className="categoria-recomendaciones">Lorem ipsum dolor sit.</p>
-              <h4 className="title-item-recomendaciones">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, harum.</h4>
-              <p className="descripcion-recomendaciones">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat vitae praesentium quos nemo similique, tempore ab possimus obcaecati quidem quibusdam rerum optio sequi voluptas voluptate tenetur velit ratione. Corrupti.</p>
-          </article>
+        ))}
       </section>
     </section>
-  )
+  );
 };
 
 export { RecomendacionesInicio };
