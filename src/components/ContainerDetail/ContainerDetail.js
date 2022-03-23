@@ -4,7 +4,7 @@ import { Layout } from "../Layout/Layout";
 import { recomendacion } from "../../functions/recomendaciones/filteredRecomendaciones";
 import { useParams } from "react-router-dom";
 import { RecomendacionItemDetail } from "../RecomendacionItemDetail/RecomendacionItemDetail";
-import { RecienteItemDetail } from "../../RecienteItemDetail/RecienteItemDetail";
+import { RecienteItemDetail } from "../RecienteItemDetail/RecienteItemDetail";
 import { reciente } from "../../functions/reciente/filteredReciente";
 
 const ContainerDetail = () => {
