@@ -52,8 +52,8 @@ const Reciente = () => {
           <tr>
             <th>#</th>
             <th>ID</th>
+            <th>Imagen</th>
             <th>Fecha</th>
-            <th>URL Imagen</th>
             <th>Categoria</th>
             <th>Titulo</th>
             <th>Acciones</th>
@@ -65,8 +65,14 @@ const Reciente = () => {
               <tr key={reciente.sku}>
                 <td>{index + 1}</td>
                 <td>{reciente.sku}</td>
+                <td style={{ width: 150 }}>
+                  <img
+                    style={{ width: "100%" }}
+                    src={reciente.urlImagen}
+                    alt="imagen de reciente"
+                  />
+                </td>
                 <td>{reciente.fecha}</td>
-                <td>{reciente.urlImagen}</td>
                 <td>{reciente.categoria}</td>
                 <td>{reciente.titulo}</td>
                 <td>

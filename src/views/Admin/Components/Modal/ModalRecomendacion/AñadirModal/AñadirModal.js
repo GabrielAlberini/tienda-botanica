@@ -27,35 +27,40 @@ const AñadirModal = ({
       <Modal.Body>
         <Form>
           <Stack>
+            <Form.Label>ID</Form.Label>
             <Form.Control
               id="sku"
-              placeholder="ID"
+              placeholder="Define tu ID"
               type="text"
               className="mb-2"
             />
+            <Form.Label>URL de imagen</Form.Label>
             <Form.Control
               id="urlImagen"
-              placeholder="URL imagen"
+              placeholder="Ingresa URL de imagen"
               type="text"
               className="mb-2"
             />
+            <Form.Label>Categoria</Form.Label>
             <Form.Control
               id="categoria"
-              placeholder="Categoria"
+              placeholder="Ingresa la categoria"
               type="text"
               className="mb-2"
             />
+            <Form.Label>Titulo</Form.Label>
             <Form.Control
               id="titulo"
-              placeholder="Titulo"
+              placeholder="Ingresa un titulo"
               type="text"
               className="mb-2"
             />
+            <Form.Label>Contenido</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
               id="contenido"
-              placeholder="Contenido"
+              placeholder="Ingresa el contenido"
               type="text"
               className="mb-2"
             />

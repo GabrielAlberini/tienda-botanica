@@ -94,7 +94,7 @@ const EditarModal = ({
                 });
               }}
             />
-            <Form.Label>Detalle</Form.Label>
+            <Form.Label>Detalle (no más de 200 caractéres)</Form.Label>
             <Form.Control
               as="textarea"
               id="detalle"

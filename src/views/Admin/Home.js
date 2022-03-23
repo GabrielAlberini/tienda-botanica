@@ -1,5 +1,5 @@
 import { Recomendaciones } from "./Components/Recomendaciones";
-import { Stack, Button } from 'react-bootstrap'
+import { Stack, Button } from "react-bootstrap";
 import { cerrarSesion } from "../../functions/login/signOut";
 import { Reciente } from "./Components/Reciente";
 
