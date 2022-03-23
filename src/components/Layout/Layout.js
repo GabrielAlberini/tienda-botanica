@@ -1,13 +1,13 @@
+import "./Layout.css";
 import { MenuMobile } from "../MenuMobile/MenuMobile";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
-import "./Layout.css";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, headerShow = true }) => {
   return (
     <>
       <MenuMobile />
-      <Header />
+      {headerShow && <Header />}
       <main>
         <div className="main-section">{children}</div>
       </main>

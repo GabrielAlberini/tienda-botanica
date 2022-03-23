@@ -47,10 +47,6 @@
   background-color: transparent;
 }
 
-.showMenu {
-  display: none;
-}
-
 nav {
   z-index: 100000;
   padding: 1rem;
@@ -97,6 +93,8 @@ nav > ul > a:hover {
     display: block;
     z-index: 300312300;
     position: fixed;
+    right: 0;
+    margin: 1.3rem;
   }
 
   nav {

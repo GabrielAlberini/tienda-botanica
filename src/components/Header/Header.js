@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
-import './Header.css'
+import "./Header.css";
 
 const Header = () => {
-
   return (
     <>
       <header className="container-header">

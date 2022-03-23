@@ -1,0 +1,23 @@
+.showMenu {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .showMenu {
+    z-index: -10000;
+    position: absolute;
+  }
+  .showMenu-ul {
+    display: block;
+    position: fixed;
+    z-index: 20000;
+    top: 0;
+    background-color: #94252cef;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
