@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Layout.css";
+import ReactPlayer from "react-player";
 
 const Layout = ({ children }) => {
   const [getMenu, setGetMenu] = useState(false);
@@ -35,6 +36,16 @@ const Layout = ({ children }) => {
         </ul>
       </nav>
       <header className="container-header">
+        <div className="container-video-header">
+          <ReactPlayer
+            url="video/video.mp4"
+            className="react-player"
+            height='auto'
+            playing
+            loop
+            playbackRate={0.6}
+          />
+        </div>
         <div className="container-img-banner-layout">
           <img
             className="img-banner-layout"

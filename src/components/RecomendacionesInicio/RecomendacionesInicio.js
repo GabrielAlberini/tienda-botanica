@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import "./RecomendacionesInicio.css";
 import { getAllProducts } from "../../functions/recomendaciones/getAllProducts";
 import { Stack, Spinner, Container } from "react-bootstrap";
+import { Link, useParams } from "react-router-dom";
 
 const RecomendacionesInicio = () => {
   const [recomendaciones, setRecomendaciones] = useState([]);
+  const { sku } = useParams()
 
   function actualizarEstadoProductos() {
     getAllProducts().then((listadoDeRecomendaciones) => {
@@ -29,7 +31,7 @@ const RecomendacionesInicio = () => {
       <section className="section-recomendaciones">
         {recomendaciones.map((reco) => (
           <article>
-            <a className="link-recomendacion" href="">
+            <Link to={`/blog/${reco.sku}`} className="link-recomendacion" href="">
               <div className="container-img-recomendaciones">
                 <img
                   className="container-img-recomendaciones"
@@ -37,7 +39,7 @@ const RecomendacionesInicio = () => {
                   alt={reco.titulo}
                 />
               </div>
-            </a>
+            </Link>
             <p className="categoria-recomendaciones">{reco.categoria}</p>
             <h4 className="title-item-recomendaciones">{reco.titulo}</h4>
             <p className="descripcion-recomendaciones">{reco.contenido}</p>

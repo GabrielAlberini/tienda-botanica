@@ -4,6 +4,7 @@ import { Inicio } from './views/Inicio'
 import { TiendaBotanica } from './views/TiendaBotanica'
 import { Contacto } from './views/Contacto'
 import { NotFound } from './views/NotFound'
+import { ContainerDetail } from "./components/ContainerDetail/ContainerDetail";
 
 const Router = () => {
   return (
@@ -12,6 +13,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/tienda-botanica" element={<TiendaBotanica />} />
+        <Route path="/blog/:sku" element={<ContainerDetail />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/admin" element={<MenuLogin />} />
         <Route path="/*" element={<NotFound />} />
