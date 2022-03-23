@@ -7,7 +7,7 @@
 }
 .react-player {
   min-width: 100%;
-  filter: grayscale(0.5);
+  filter: grayscale(.9);
 }
 
 .container-menu-icon {
