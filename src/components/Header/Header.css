@@ -118,7 +118,7 @@ nav > ul > a:hover {
     position: fixed;
     z-index: 20000;
     top: 0;
-    background-color: #94252c;
+    background-color: #94252cef;
     text-align: center;
     width: 100%;
     height: 100vh;
@@ -129,10 +129,11 @@ nav > ul > a:hover {
 
   nav > ul > a {
     color: black;
+    font-size: 1.4rem;
   }
 
   .showMenu {
-    display: none;
+    z-index: -10000;
     position: absolute;
   }
 }
