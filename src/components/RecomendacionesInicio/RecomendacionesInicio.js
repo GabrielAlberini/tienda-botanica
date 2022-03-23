@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router-dom";
 
 const RecomendacionesInicio = () => {
   const [recomendaciones, setRecomendaciones] = useState([]);
-  const { sku } = useParams()
+  const { sku } = useParams();
 
   function actualizarEstadoProductos() {
     getAllProducts().then((listadoDeRecomendaciones) => {
@@ -31,7 +31,11 @@ const RecomendacionesInicio = () => {
       <section className="section-recomendaciones">
         {recomendaciones.map((reco) => (
           <article>
-            <Link to={`/blog/${reco.sku}`} className="link-recomendacion" href="">
+            <Link
+              to={`/blog/${reco.sku}`}
+              className="link-recomendacion"
+              href=""
+            >
               <div className="container-img-recomendaciones">
                 <img
                   className="container-img-recomendaciones"

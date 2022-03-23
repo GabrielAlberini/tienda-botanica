@@ -9,7 +9,7 @@ const Inicio = () => {
     <Layout>
       <SideBarInicio />
       <RecomendacionesInicio />
-      <RecienteInicio />
+      {/* <RecienteInicio /> */}
       <MensajePatrocinador />
     </Layout>
   );

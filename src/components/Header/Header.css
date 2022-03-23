@@ -9,7 +9,7 @@
 .react-player {
   min-width: 100%;
   filter: grayscale(0.5);
-  filter: brightness(0.4);
+  filter: brightness(0.3);
 }
 
 .container-header {
