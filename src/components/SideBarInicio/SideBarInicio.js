@@ -9,12 +9,12 @@ const SideBarInicio = () => {
       <div className="container-txt">
         <h3>¡Hola!</h3>
         <p>
-          Nos llamamos Euge y Fausto y nos dedico a aprender, experimentar y compartir
-          herramientas para cuidar la Tierra: el planeta que somos. A través de
-          mi trabajo quiero hacerle el camino más fácil a quienes también
-          quieren observar, cuestionar y regenerar su relación con la Tierra ♡
+          Bienvenidx a Tienda Botánica. Aquí encontrarás
+          recomendaciones de jardinería, información sobre plantas, e ideas
+          creativas para ambientar tus espacios.
         </p>
-        <a className="btn-general"
+        <a
+          className="btn-general"
           href="https://www.instagram.com/tiendabotanica.sf/"
           rel="noreferrer"
           target="_blank"

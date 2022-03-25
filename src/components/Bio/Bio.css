@@ -1,74 +1,50 @@
+
 .main-tienda-botanica {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 4rem 0;
+  gap: 4rem;
 }
 
 .container-bio {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-around;
-}
-
-.container-imagenes-tienda {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.container-img-tienda {
-  width: 350px;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
 
 .img-tienda {
-  width: 100%;
+  width: 400px;
   filter: grayscale(1);
-  border-radius: 5px;
 }
 
-.container-txt-lema {
-  margin-top: 4rem;
-  width: 100%;
+.container-bio > p {
+  width: 300px;
   text-align: center;
-  padding: 4rem;
-  font-weight: bold;
-  font-size: 1.3rem;
-  background-color: #FEF2EE;
 }
 
-.container-txt-lema > p {
-  background-color: #FEF2EE;
-}
-
+.container-txt-lema,
 .container-contacto-bio {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
   text-align: center;
 }
 
+
 @media (max-width: 480px) {
-  .main-tienda-botanica {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .container-bio {
+    flex-direction: column;
   }
 
-  .container-txt-lema {
-    margin-top: 4rem;
-    width: 100%;
-    text-align: center;
-    padding: 4rem;
-    font-weight: bold;
-    font-size: 1rem;
-    background-color: #FEF2EE;
+  .container-bio:nth-child(1) {
+    flex-direction: column-reverse;
   }
-  
-  .container-txt-lema > p {
-    background-color: #FEF2EE;
+
+  .img-tienda {
+    width: 300px;
+    filter: grayscale(1);
   }
 }

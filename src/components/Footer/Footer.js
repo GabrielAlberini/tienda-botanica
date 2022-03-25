@@ -6,13 +6,14 @@ const Footer = () => {
       <footer className="container-footer">
         <div className="container-txt-footer">
           <p>
-            Todo el contenido (textos, letras dibujadas, fotos, ilustraciones)
+            {/* Todo el contenido (textos, letras dibujadas, fotos, ilustraciones)
             lo he hecho yo con mucho amor, y lo comparto bajo licencia CC
             (by-nc-nd). Puedes compartir lo que encuentras aquí, pero por favor
             incluye siempre los créditos y un enlace a la publicación original o
-            a esta web.
+            a esta web. */}
+            Fuerza Natural ☘
           </p>
-          <p>Robar es feo, compartir es lindo ♡</p>
+          {/* <p>Robar es feo, compartir es lindo ♡</p> */}
         </div>
         <div className="container-img-footer-layout">
           <img

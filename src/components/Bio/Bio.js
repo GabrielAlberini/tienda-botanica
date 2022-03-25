@@ -6,20 +6,11 @@ const Bio = () => {
       <section className="main-tienda-botanica">
         <div className="container-bio">
           <p>
-            Me llamo Eugenia y me dedico a aprender, experimentar y compartir
-            herramientas para cuidar el planeta que somos. A través de mi
-            trabajo quiero hacerle el camino más fácil a quienes también quieren
-            observar, cuestionar y regenerar su relación con la Tierra ♡
+            Soy Eugenia, disfruto mucho de estar cerca de la naturaleza, los
+            ambientes relajados y las plantas. Por eso, me zambullí a emprender
+            en este ámbito que me sorprende día a día con colores y raíces. Te
+            invito a que descubras tu fuerza natural.
           </p>
-          <p>
-            Mi nombre es Fausto y me encanta aprender cosas nuevas.
-            Constantemente estoy redeado de gente muy linda y de las cuales
-            aprendo a cada paso. Mi gran pasión son las plantas y los animales.
-            Creo que estamos juntos en este mundo con la misión de poder
-            convivir y aprender a través del amor.
-          </p>
-        </div>
-        <div className="container-imagenes-tienda">
           <div className="container-img-tienda">
             <img
               className="img-tienda"
@@ -27,6 +18,8 @@ const Bio = () => {
               alt="foto de euge"
             />
           </div>
+        </div>
+        <div className="container-bio">
           <div className="container-img-tienda">
             <img
               className="img-tienda"
@@ -34,8 +27,13 @@ const Bio = () => {
               alt="foto de fausto"
             />
           </div>
+          <p>
+            Soy Fausto, licenciado en marketing. Donde más vivo me siento, es en
+            contacto con la naturaleza y su fuerza. Me encantan las plantas,
+            trabajar con ellas es un aprendizaje continuo de crecimiento.
+          </p>
         </div>
-        <div className="container-descripcion">
+        {/* <div className="container-descripcion">
           <p>
             En este blog recopilamos experimentos y reflexiones sobre ecología,
             derechos de los animales, feminismo, consumo responsable,
@@ -51,23 +49,23 @@ const Bio = () => {
             que hacen posible nuestro trabajo a través de mi comunidad de
             Patreon ♡
           </p>
-        </div>
+        </div> */}
       </section>
       <section className="container-txt-lema">
         <p>
-          Si te parece que es una afirmación muy radical… ¡me alegra! Radical
-          significa “perteneciente o relativo a la raíz”, así que estando en el
-          contexto que estamos, pocas cosas me parecen más apropiadas que
-          volvernos radicales, ir a la raíz de los asuntos y tratar de
-          entenderlos a fondo, para poder empezar a cambiarlos desde ahí, y no
-          quedarnos solamente distraídas mirando la superficie.
+          Juntos hacemos Tienda Botánica, un emprendimiento litoraleño.
+          Trabajamos y promovemos el vínculo con la fuerza natural de las
+          plantas, para eso creamos una red comercial local, de las cual nos
+          proveemos, mayormente, de emprendedorxs de la ciudad de Santa Fe.
+          Nuestra Tienda se encuentra en B Candioti, en la capital santafesina.
+          Donde ofrecemos nuestros productos y servicios en jardinería, siempre
+          brindando cuidado a la naturaleza. Te invitamos a que seas parte!
         </p>
       </section>
       <section className="container-contacto-bio">
-        <p>
-          Si quieres saber más sobre otras facetas sobre nuestro trabajo puedes visitar:
-        </p>
-        <a className="btn-general"
+        <p>Si deseas saber más sobre Tienda Botánica visítanos en Instagram</p>
+        <a
+          className="btn-general"
           href="https://www.instagram.com/tiendabotanica.sf/"
           rel="noreferrer"
           target="_blank"

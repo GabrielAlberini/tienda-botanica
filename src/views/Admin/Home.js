@@ -1,9 +1,10 @@
 import { Recomendaciones } from "./Components/Recomendaciones";
 import { Stack, Button } from "react-bootstrap";
 import { cerrarSesion } from "../../functions/login/signOut";
-import { Reciente } from "./Components/Reciente";
+// import { Reciente } from "./Components/Reciente";
 
 const Home = () => {
+
   return (
     <>
       <Stack direction="horizontal" className="justify-content-between">
